@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="View Open NeedIt Records">cee423c393cb0210c5a877f08bba10b3</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"df34063475ec45a7ba65c11070ffb5b8","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"df34063475ec45a7ba65c11070ffb5b8"}],"goals":[{"name":"primary","trigger_id":"df34063475ec45a7ba65c11070ffb5b8","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":""},"id":"e553bd35f65648419b0f863b1435745c","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"72d13c0e805c45109d1cd07804081e9a","name":"End","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"5fecb5eb6bef46b3aa0df5f5c5f6d76a","name":"NeedIt Type","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"f1581cabfe5e4232b068140daf61e8af","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Which type of NeedIt record would you like to view?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""}],"edges":[{"type":"Edge","source_node_id":"e553bd35f65648419b0f863b1435745c","target_node_id":"5fecb5eb6bef46b3aa0df5f5c5f6d76a","id":"7234fe04f4ec46ba9ef3865e447f9b00"},{"type":"Edge","source_node_id":"5fecb5eb6bef46b3aa0df5f5c5f6d76a","target_node_id":"72d13c0e805c45109d1cd07804081e9a","id":"d8599e411e0146fb97468c4608cbc808"}],"id":"primary"}],"script_variables":[{"type":"String","name":"LiveAgent_application","value":{"type":"String","mode":"string"},"list":false,"id":"b127169c9fc04762ba002d20d4758ae7","formatType":"text","secure":false,"sensitive":false,"aiInput":false}],"glide_variables":[{"type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Choice","choices":[{"name":"Legal","element":"legal"},{"name":"Facilities","element":"facilities"},{"name":"Human Resources","element":"human resources"}],"id":"f1581cabfe5e4232b068140daf61e8af","name":"needit_type","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"NeedIt Type"}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"2111df4b934b0210c5a877f08bba105b","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"c4b2d78b934b0210c5a877f08bba10a0","name":"View Open NeedIt Records","key_phrases":["View Open NeedIt Records","NeedIt Request","need something"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[{"name":null,"visible":false,"sysId":"2e91db8b934b0210c5a877f08bba1002"}],"triggerable_by_notification":false,"description":"Topic allows users to view their open NeedIt records","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>c4b2d78b934b0210c5a877f08bba10a0</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.65",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "e553bd35f65648419b0f863b1435745c": {
+          "id": "e553bd35f65648419b0f863b1435745c",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "72d13c0e805c45109d1cd07804081e9a": {
+          "id": "72d13c0e805c45109d1cd07804081e9a",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "5fecb5eb6bef46b3aa0df5f5c5f6d76a": {
+          "name": "NeedIt Type",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Which type of NeedIt record would you like to view?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "f1581cabfe5e4232b068140daf61e8af",
+          "detailDescription": "",
+          "id": "5fecb5eb6bef46b3aa0df5f5c5f6d76a",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        }
+      },
+      "edges": [
+        {
+          "id": "7234fe04f4ec46ba9ef3865e447f9b00",
+          "edgeType": "Edge",
+          "source": "e553bd35f65648419b0f863b1435745c",
+          "target": "5fecb5eb6bef46b3aa0df5f5c5f6d76a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d8599e411e0146fb97468c4608cbc808",
+          "edgeType": "Edge",
+          "source": "5fecb5eb6bef46b3aa0df5f5c5f6d76a",
+          "target": "72d13c0e805c45109d1cd07804081e9a",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "b127169c9fc04762ba002d20d4758ae7": {
+      "id": "b127169c9fc04762ba002d20d4758ae7",
+      "name": "LiveAgent_application",
+      "value": {
+        "mode": "simple",
+        "value": null
+      },
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "f1581cabfe5e4232b068140daf61e8af": {
+      "id": "f1581cabfe5e4232b068140daf61e8af",
+      "name": "needit_type",
+      "label": "NeedIt Type",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Legal",
+          "value": "legal"
+        },
+        {
+          "label": "Facilities",
+          "value": "facilities"
+        },
+        {
+          "label": "Human Resources",
+          "value": "human resources",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "5fecb5eb6bef46b3aa0df5f5c5f6d76a",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>View Open NeedIt Records</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 07:57:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>c2e4a7c393cb0210c5a877f08bba101b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1380551_needit_v">2111df4b934b0210c5a877f08bba105b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">2111df4b934b0210c5a877f08bba105b</sys_scope>
+        <sys_update_name>sys_cb_design_topic_c2e4a7c393cb0210c5a877f08bba101b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-02 07:57:56</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>
